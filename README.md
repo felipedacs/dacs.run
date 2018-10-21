@@ -15,6 +15,12 @@ npm run serve
 npm run build
 ```
 
+### deploy
+```
+chmod +x deploy.sh
+./deploy.sh
+```
+
 ### Run your tests
 ```
 npm run test
