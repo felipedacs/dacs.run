@@ -14,6 +14,5 @@ export default {
   border-radius: 50%;
   width: 100%;
   max-width: 90px;
-  max-width: 90px;
 }
 </style>
