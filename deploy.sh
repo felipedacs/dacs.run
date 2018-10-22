@@ -21,10 +21,10 @@ git commit -m 'deploy'
 
 
 # branch gh-pages
-git checkout -b gh-pages
+git checkout -b master
 
 # if you are deploying to https://<USERNAME>.github.io
-git push -f https://gitlab.com/felipedacs/felipedacs.gitlab.io.git gh-pages
+git push -f https://github.com/felipedacs/felipedacs.github.io.git master
 
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
 # git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
