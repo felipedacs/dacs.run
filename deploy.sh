@@ -24,7 +24,7 @@ git commit -m 'deploy'
 git checkout -b gh-pages
 
 # if you are deploying to https://<USERNAME>.github.io
-git push -f https://github.com/felipedacs/felipedacs.github.io.git gh-pages
+git push -f https://gitlab.com/felipedacs/felipedacs.gitlab.io.git gh-pages
 
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
 # git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
