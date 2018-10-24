@@ -11,29 +11,24 @@
     <div class="messages">
 
       <Message id="msg1" v-show="msgs[0].status" :nameVisible="true">
-        <p>Olá, meu nome é Felipe, tenho 22 anos e sou <strike>garoto de programa</strike> dev jr. Interessei-me na área em 2016 e meu <a href="https://dacs.work" target="_blank">portfólio</a> está simples ainda, mas o mantenho atualizado.</p>
+        <p>Olá, meu nome é Felipe e sou <strike>garoto de programa</strike> dev jr. Possuo um <a href="https://dacs.work" target="_blank">portfólio</a>,  escrevo no <a href="https://escalimetro.github.io" target="_blank">escalímetro</a> e também posso ser encontrado em:</p>
       </Message>
 
-      <Message id="msg2" v-show="msgs[1].status" :nameVisible="true">
-        <p>Atualmente estudo principalmente go, c# com .net MVC e o framework vue. Sempre que sinto confiança o suficiente escrevo no <a href="https://escalimetro.github.io" target="_blank">escalímetro</a>. Sei alguma coisa de php, python e java; estou aprendendo a usar o ecosistema do ubuntu.</p>
-      </Message>
-
-      <Message id="msg3" v-show="msgs[2].status" :nameVisible="true">
-        <p style="padding-bottom: 1.5em;">Pode me encontrar em:</p>
+      <Message id="msg3" v-show="msgs[1].status" :nameVisible="true">
         <div class="columns is-mobile is-multiline">
           <Icons v-for="(socialLink, i) in socialLinks" :key='i' :link='socialLink' @exibeModal="exibeModal($event)">
           </Icons>
         </div>
       </Message>
 
-      <Message id="msg4" v-show="msgs[3].status" :nameVisible="true">
-        Mantenho atualmente apenas <a href="https://gitlab.com/felipedacs/estudo-pratica" target="_blank">meu diário de estudo</a>, <a href="http://carrinho.top" target="_blank">lista de compras</a>, <a href="https://github.com/felipedacs/yugo" target="_blank">yugo (meu tcc)</a> e o <a href="http://felipedacs.pythonanywhere.com/" target="_blank">randomaster</a>.
+      <Message id="msg4" v-show="msgs[2].status" :nameVisible="true">
+        Mantenho atualmente: <a href="https://gitlab.com/felipedacs/estudo-pratica" target="_blank">estudo/prática</a>, <a href="http://carrinho.top" target="_blank">lista de compras</a>, <a href="https://github.com/felipedacs/yugo" target="_blank">yugo</a> e o <a href="http://felipedacs.pythonanywhere.com/" target="_blank">randomaster</a>.
       </Message>
 
       <Message v-show="msgLoad" :nameVisible="false"></Message>
     </div>
 
-    <Send @exibeModal="exibeModalAviso($event)"></Send>
+    <!-- <Send @exibeModal="exibeModalAviso($event)"></Send> -->
 
   </div>
 </template>
@@ -43,7 +38,7 @@
 import Avatar from '@/components/Home/Avatar.vue'
 import Message from '@/components/Home/Message.vue'
 import Icons from '@/components/Home/Icons.vue'
-import Send from '@/components/Home/Send.vue'
+// import Send from '@/components/Home/Send.vue'
 
 export default {
   name: 'home',
@@ -51,7 +46,7 @@ export default {
     Avatar,
     Message,
     Icons,
-    Send,
+    // Send,
   },
   methods:{
     exibeModal(texto){
@@ -69,9 +64,6 @@ export default {
       let vm = this;
 
       for (var i = 0; i < msgs.length; i++) {
-
-
-
         // tempo digitando enquanto não há resposta
         let tempoDigitando = ((msgs[i].tempoFinal-msgs[i].tempoInicial)/5)+msgs[i].tempoInicial; // tempo para não ser exato o "digitando"
         setTimeout(function(){
@@ -88,21 +80,17 @@ export default {
           vm.msgLoad = false;
         }, msgs[i].tempoFinal);
 
-        if (i != 1) {
-          // scroll para baixo assim que aparecer msg digitando
-          setTimeout(function(){
-            window.scrollTo(0,document.body.scrollHeight);
-          }, tempoDigitando+10); // tempo +10ms
-
-          // scroll para baixo assim que aparecer msg
-          setTimeout(function(){
-            window.scrollTo(0,document.body.scrollHeight);
-          }, msgs[i].tempoFinal+10);
-        }
-
-
-
-
+        // if (i != 0) {
+        //   // scroll para baixo assim que aparecer msg digitando
+        //   setTimeout(function(){
+        //     window.scrollTo(0,document.body.scrollHeight);
+        //   }, tempoDigitando+10); // tempo +10ms
+        //
+        //   // scroll para baixo assim que aparecer msg
+        //   setTimeout(function(){
+        //     window.scrollTo(0,document.body.scrollHeight);
+        //   }, msgs[i].tempoFinal+10);
+        // }
       }
     }
   },
@@ -112,22 +100,17 @@ export default {
         {
           status: false,
           tempoInicial: 0,
-          tempoFinal: 4000
+          tempoFinal: 2500
         },
         {
           status: false,
-          tempoInicial: 4000,
+          tempoInicial: 2500,
+          tempoFinal: 7000
+        },
+        {
+          status: false,
+          tempoInicial: 7000,
           tempoFinal: 10000
-        },
-        {
-          status: false,
-          tempoInicial: 10000,
-          tempoFinal: 21000
-        },
-        {
-          status: false,
-          tempoInicial: 21000,
-          tempoFinal: 27000
         }
       ],
       msgLoad: true,

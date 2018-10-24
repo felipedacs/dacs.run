@@ -4,7 +4,7 @@
     <router-view/>
   </div>
   <div class="hero-foot">
-    <span class="help">Feito gratuitamente com <span class="icon-foot icon-git"></span> <span class="icon-foot icon-github"></span> <span class="icon-foot icon-gitlab1"></span> <span class="icon-foot icon-vue-dot-js"></span> <span class="icon-foot icon-webpack"></span> <span class="icon-foot icon-IcoMoon"></span> <span class="icon-foot icon-atom"></span> <span class="icon-foot icon-ubuntu"></span> <a class="icon-foot" href="https://draculatheme.com/" target="_blank">dracula</a> </span>
+    <span class="help">Feito gratuitamente com <span class="icon-foot icon-git"></span> <span class="icon-foot icon-github"></span> <span class="icon-foot icon-gitlab1"></span> <span class="icon-foot icon-vue-dot-js"></span> <span class="icon-foot icon-webpack"></span> <span class="icon-foot icon-IcoMoon"></span> <span class="icon-foot icon-atom"></span> <span class="icon-foot icon-ubuntu"></span> <a class="icon-foot" href="https://draculatheme.com/" target="_blank">dracula</a> <a class="icon-foot" href="https://bulma.io/" target="_blank">bulma</a> </span>
   </div>
 </section>
 </template>
