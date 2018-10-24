@@ -27,9 +27,6 @@
 
       <Message v-show="msgLoad" :nameVisible="false"></Message>
     </div>
-
-    <!-- <Send @exibeModal="exibeModalAviso($event)"></Send> -->
-
   </div>
 </template>
 
@@ -38,7 +35,6 @@
 import Avatar from '@/components/Home/Avatar.vue'
 import Message from '@/components/Home/Message.vue'
 import Icons from '@/components/Home/Icons.vue'
-// import Send from '@/components/Home/Send.vue'
 
 export default {
   name: 'home',
@@ -46,7 +42,6 @@ export default {
     Avatar,
     Message,
     Icons,
-    // Send,
   },
   methods:{
     exibeModal(texto){
@@ -79,18 +74,6 @@ export default {
           eval(msg);
           vm.msgLoad = false;
         }, msgs[i].tempoFinal);
-
-        // if (i != 0) {
-        //   // scroll para baixo assim que aparecer msg digitando
-        //   setTimeout(function(){
-        //     window.scrollTo(0,document.body.scrollHeight);
-        //   }, tempoDigitando+10); // tempo +10ms
-        //
-        //   // scroll para baixo assim que aparecer msg
-        //   setTimeout(function(){
-        //     window.scrollTo(0,document.body.scrollHeight);
-        //   }, msgs[i].tempoFinal+10);
-        // }
       }
     }
   },
@@ -222,10 +205,5 @@ export default {
 
 .coluna-avatar{
   min-width: 100px;
-}
-
-.messages{
-  /* espaço para enviar msg */
-  padding-bottom: 5rem;
 }
 </style>
