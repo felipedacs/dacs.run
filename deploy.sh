@@ -21,9 +21,9 @@ git push -f https://github.com/felipedacs/felipedacs.github.io.git master
 
 # mkdir public
 cd ..
-mv dist gitlab-deploy
-mkdir dist
-mv gitlab-deploy dist/public
+mkdir gitlab
+cp -r dist/* gitlab
+mv gitlab dist/public
 # move arquivo gitlab
 cp .gitlab-ci.yml dist/.gitlab-ci.yml
 cd dist
@@ -32,25 +32,3 @@ git commit -m 'deploy gl :fox_face:'
 git push -f https://gitlab.com/felipedacs/felipedacs.gitlab.io.git master
 cd ..
 cd -
-
-
-
-
-
-
-
-
-
-# # mkdir public
-# cd ..
-# mkdir gitlab
-# cp -r dist/* gitlab
-# mv gitlab dist/public
-# # move arquivo gitlab
-# cp .gitlab-ci.yml dist/.gitlab-ci.yml
-# cd dist
-# git add -A
-# git commit -m 'deploy gl :fox_face:'
-# git push -f https://gitlab.com/felipedacs/felipedacs.gitlab.io.git master
-# cd ..
-# cd -
