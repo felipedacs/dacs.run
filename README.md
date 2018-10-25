@@ -15,7 +15,7 @@ npm run serve
 npm run build
 ```
 
-### deploy
+### deploy on github and gitlab
 ```
 chmod +x deploy.sh
 ./deploy.sh
