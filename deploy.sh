@@ -13,22 +13,15 @@ echo 'https://github.com/felipedacs/dacs.run' > readme.md
 
 git init
 git add -A
-git commit -m 'deploy gh :octocat:'
+git commit -m 'deploy :octocat:'
 
 # if you are deploying to https://<USERNAME>.github.io
 git push -f https://github.com/felipedacs/felipedacs.github.io.git master
 
 
-# mkdir public
-cd ..
-mkdir gitlab
-cp -r dist/* gitlab
-mv gitlab dist/public
-# move arquivo gitlab
-cp .gitlab-ci.yml dist/.gitlab-ci.yml
-cd dist
+cp ../.gitlab-ci.yml .gitlab-ci.yml
 git add -A
-git commit -m 'deploy gl :fox_face:'
+git commit -m 'deploy :fox_face:'
 git push -f https://gitlab.com/felipedacs/felipedacs.gitlab.io.git master
-cd ..
+
 cd -
