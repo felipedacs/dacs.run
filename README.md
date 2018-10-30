@@ -1,5 +1,5 @@
 # dacs.run
-* Source code of [dacs.run](https://dacs.run) and [dacs.run](http://felipe.dacs.run)
+* Source code of [dacs.run](https://dacs.run) and [felipe.dacs.run](http://felipe.dacs.run)
 * Deploy on branch master in  [felipedacs.github.io](https://github.com/felipedacs/felipedacs.github.io) and [felipedacs.gitlab.io](https://gitlab.com/felipedacs/felipedacs.gitlab.io)
 
 ## Project setup
