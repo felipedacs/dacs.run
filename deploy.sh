@@ -53,11 +53,12 @@ cp ../.projects-gitlab.txt .projects-gitlab.txt
 # setar nome do repositorio
 # clonar a partir de gl-pages
 # remover .git do projeto para não criar submodulo (pois também não funciona)
-for repo in `cat .projects-gitlab.txt`; do
-    echo "==================== repo: $repo"
-    git clone --depth=1 --branch=gl-pages https://gitlab.com/felipedacs/$repo
-    rm -rf $repo/.git
-done
+# descomentar linhas abaixo caso queira adicionar paginas ao gitlab pages
+# for repo in `cat .projects-gitlab.txt`; do
+#     echo "==================== repo: $repo"
+#     git clone --depth=1 --branch=gl-pages https://gitlab.com/felipedacs/$repo
+#     rm -rf $repo/.git
+# done
 
 git add -A
 git commit -m 'deploy :fox_face:'
