@@ -22,7 +22,7 @@
       </Message>
 
       <Message id="msg4" v-show="msgs[2].status" :nameVisible="true">
-        Mantenho atualmente: <a href="https://gitlab.com/felipedacs/estudo-pratica" target="_blank">estudo/prática</a>, <a href="http://carrinho.top" target="_blank">lista de compras</a>, <a href="https://github.com/felipedacs/yugo" target="_blank">yugo</a> e o <a href="http://felipedacs.pythonanywhere.com/" target="_blank">randomaster</a>.
+        Mantenho atualmente: <a href="https://gitlab.com/felipedacs/ead" target="_blank">estudos ativos</a>, <a href="http://carrinho.top" target="_blank">lista de compras</a>, <a href="https://github.com/felipedacs/yugo" target="_blank">yugo</a> e o <a href="http://felipedacs.pythonanywhere.com/" target="_blank">randomaster</a>.
       </Message>
 
       <Message v-show="msgLoad" :nameVisible="false"></Message>
